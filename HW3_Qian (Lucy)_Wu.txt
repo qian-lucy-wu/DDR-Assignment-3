@@ -1,0 +1,28 @@
+
+Part 1: Use your browsers development tools.  Open the network tab and analyze the network for the following:
+
+
+1. Navigate to “Books” > “B&N Top 100”, URL: 
+   https://www.barnesandnoble.com/b/books/_/N-1fZ29Z8q8
+
+2. Navigate to page 2 of “B&N Top 100”, URL: 
+   https://www.barnesandnoble.com/b/books/_/N-1fZ29Z8q8?Nrpp=20&page=2
+   Yes, the URL changed, adding the page number & no. of items on this page.
+
+3. The part that represents the page number: "page=2";
+   The variable that represents the number of items per page: "Nrpp=20".
+
+4. Modify these numbers to view the first page with 40 items:
+   https://www.barnesandnoble.com/b/books/_/N-1fZ29Z8q8?Nrpp=40
+   OR: https://www.barnesandnoble.com/b/books/_/N-1fZ29Z8q8?Nrpp=40&page=1
+
+5. How can we access each book and its product page URL?
+   By finding tags that follow the following pattern:
+
+ <div class="product-shelf-title">
+ <h3 class="product-info-title">
+ <a title class="" onclick="set_cookie('...');href="......"product-title-plp="...">
+
+The URL can be partially found in href="......". Adding "www.barnesandnoble.com" before that should give us the complete URL.
+
+
